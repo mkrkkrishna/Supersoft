@@ -13,8 +13,24 @@ import java.util.List;
 @Controller
 public class HelloController {
 
-    //@Autowired
-    //ContactUsService contactUsService;
+
+    /*private String host="smtp.gmail.com";
+    private String portNo="587";
+    private String user="www.ghochu.prasad@gmail.com";
+    private String pass="rohitkumarmishra";*/
+
+    /*@Autowired
+    private AddressDetailsService addressDetailsService;
+    @Autowired
+    private EducationDetailsService educationDetailsService;
+    @Autowired
+    private KeySkillDetailsService keySkillDetailsService;
+    @Autowired
+    private WorkExperienceDetailsService workExperienceDetailsService;
+    @Autowired
+    private PersonalDetailsService personalDetailsService;*/
+    @Autowired
+    private ContactUsService contactUsService;
 
     @GetMapping({"/","/index"})
     public String showHome()
@@ -33,7 +49,7 @@ public class HelloController {
     @GetMapping("contactUsDetails/{contactId}")
     public String showContactUsDetails(ModelMap model,@PathVariable("contactId") Integer contactId)
     {
-        //model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
+        model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
         return "showContactUsDetails";
     }
 
