@@ -1,15 +1,9 @@
 package com.soft.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.DynamicUpdate;
 
 
-@Entity
+
+/*@Entity
 @Table(name="KEY_SKILL_DETAILS")
 @DynamicUpdate
 
@@ -60,9 +54,4 @@ public class KeySkillDetails {
 	public void setEmployeeEmailId(String employeeEmailId) {
 		this.employeeEmailId = employeeEmailId;
 	}
-
-	
-	
-	
-	
-}
+}*/

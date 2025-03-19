@@ -1,8 +1,8 @@
 package com.soft.model;
 
-import javax.persistence.*;
 
-@Entity
+
+/*@Entity
 @Table(name="COMMENTS")
 public class Comments {
 
@@ -66,4 +66,4 @@ public class Comments {
 	}
 	
 	
-}
+}*/

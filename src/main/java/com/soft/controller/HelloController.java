@@ -29,8 +29,8 @@ public class HelloController {
     private WorkExperienceDetailsService workExperienceDetailsService;
     @Autowired
     private PersonalDetailsService personalDetailsService;*/
-    @Autowired
-    private ContactUsService contactUsService;
+    /*@Autowired
+    private ContactUsService contactUsService;*/
 
     @GetMapping({"/","/index"})
     public String showHome()
@@ -49,7 +49,7 @@ public class HelloController {
     @GetMapping("contactUsDetails/{contactId}")
     public String showContactUsDetails(ModelMap model,@PathVariable("contactId") Integer contactId)
     {
-        model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
+//        model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
         return "showContactUsDetails";
     }
 

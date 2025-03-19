@@ -3,12 +3,10 @@ package com.soft.model;
 
 
 
+/*
 public class Tag {
 
-	
 	public int id;
-	
-	
 	public String tagName;
 
 	public int getId() {
@@ -32,4 +30,4 @@ public class Tag {
 		this.tagName = tagName;
 	}
 
-}
+}*/

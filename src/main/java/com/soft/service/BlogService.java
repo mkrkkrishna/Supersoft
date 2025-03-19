@@ -1,5 +1,6 @@
 package com.soft.service;
 
+/*
 import java.util.List;
 
 import com.soft.model.Comments;
@@ -22,3 +23,4 @@ public interface BlogService {
 	public QuestionPutup getBloggerOfYear(String recievedYear);
 
 }
+*/
