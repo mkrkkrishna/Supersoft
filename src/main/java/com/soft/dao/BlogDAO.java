@@ -3,6 +3,7 @@ package com.soft.dao;
 
 
 
+/*
 import java.util.List;
 
 
@@ -26,4 +27,4 @@ public interface BlogDAO {
 	public QuestionPutup getBloggerOfMonth(String recievedMonth);
 	public QuestionPutup getBloggerOfYear(String recievedYear);
 	
-}
+}*/

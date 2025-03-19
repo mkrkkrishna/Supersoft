@@ -1,7 +1,7 @@
 package com.soft.service;
 
 
-import com.soft.model.PersonalDetails;
+/*import com.soft.model.PersonalDetails;
 
 public interface PersonalDetailsService {
 	public void savePersonalDetails(PersonalDetails personalDetails);
@@ -10,4 +10,4 @@ public interface PersonalDetailsService {
 	public void updatePersonalDetails(PersonalDetails personalDetails);
 	
 	
-}
+}*/

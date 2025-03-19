@@ -1,5 +1,6 @@
 package com.soft.dao;
 
+/*
 import com.soft.model.PersonalDetails;
 
 public interface PersonalDetailsDAO {
@@ -10,3 +11,4 @@ public interface PersonalDetailsDAO {
 	
 	
 }
+*/

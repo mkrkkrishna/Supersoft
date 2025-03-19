@@ -1,12 +1,7 @@
 package com.soft.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.DynamicUpdate;
+/*
 
 @Entity
 @Table(name="WORK_EXPERIENCE_DETAILS")
@@ -83,4 +78,4 @@ public class WorkExperienceDetails {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-}
+}*/

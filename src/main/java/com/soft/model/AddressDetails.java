@@ -1,16 +1,12 @@
 package com.soft.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.DynamicUpdate;
 
+
+/*
 @Entity
 @Table(name="ADDRESS_DETAILS")
-@DynamicUpdate
+//@DynamicUpdate
 
 public class AddressDetails {
 	
@@ -95,4 +91,4 @@ public class AddressDetails {
 		this.country = country;
 	}
     
-}
+}*/

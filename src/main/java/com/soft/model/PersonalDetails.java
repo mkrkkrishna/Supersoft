@@ -3,10 +3,7 @@ package com.soft.model;
 
 
 
-import javax.persistence.*;
-
-import org.hibernate.annotations.DynamicUpdate;
-
+/*
 @Entity
 @Table(name="PERSONAL_DETAILS")
 @DynamicUpdate
@@ -58,11 +55,6 @@ public class PersonalDetails {
 	@OneToOne(cascade = {CascadeType.ALL})
 	@JoinTable(name="PersonalDetails_EducationDetails",joinColumns=@JoinColumn(name="Employee_Id"),inverseJoinColumns=@JoinColumn(name="Serial_Id"))
 	private EducationDetails educationDetails=new  EducationDetails();
-	
-	
-	/*@OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
-	@JoinTable(name="PersonalDetails_KeySkillDetails",joinColumns=@JoinColumn(name="Employee_Id"),inverseJoinColumns=@JoinColumn(name="Serial_Id"))
-	private Collection<KeySkillDetails> keySkillDetails=new ArrayList<KeySkillDetails>();*/
 
 	public Integer getEmployeeId() {
 		return employeeId;
@@ -170,19 +162,4 @@ public class PersonalDetails {
 		this.educationDetails = educationDetails;
 	}
 
-	/*public Collection<KeySkillDetails> getKeySkillDetails() {
-		return keySkillDetails;
-	}
-
-	public void setKeySkillDetails(Collection<KeySkillDetails> keySkillDetails) {
-		this.keySkillDetails = keySkillDetails;
-	}*/
-
-	
-
-	
-
-	
-	
-	
-}
+}*/

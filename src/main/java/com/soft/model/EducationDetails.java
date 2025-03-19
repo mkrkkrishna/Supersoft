@@ -1,13 +1,8 @@
 package com.soft.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import org.hibernate.annotations.DynamicUpdate;
 
-import org.hibernate.annotations.DynamicUpdate;
-
+/*
 @Entity
 @Table(name="EDUCATIONAL_DETAILS")
 @DynamicUpdate
@@ -83,4 +78,4 @@ public class EducationDetails {
 	public void setCourseType(String courseType) {
 		this.courseType = courseType;
 	}
-}
+}*/
