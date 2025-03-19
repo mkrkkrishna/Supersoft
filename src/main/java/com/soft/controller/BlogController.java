@@ -44,37 +44,37 @@ public class BlogController {
 	@GetMapping("/blogPage")
 	public String showBlog(ModelMap model)
 	{
-		try
+		/*try
 		{
-			/*List<QuestionPutup> listQuestionPutup=blogService.listTitle();
-			model.addAttribute("listQuestion",listQuestionPutup);*/
+			*//*List<QuestionPutup> listQuestionPutup=blogService.listTitle();
+			model.addAttribute("listQuestion",listQuestionPutup);*//*
 		
 			Calendar now = Calendar.getInstance();
 			
-			/*blogger of month*/
-			/*String currentMonth=(now.get(Calendar.MONTH) + 1)+"";
+			*//*blogger of month*//*
+			*//*String currentMonth=(now.get(Calendar.MONTH) + 1)+"";
 			System.out.println("current month is string :"+currentMonth);
 			QuestionPutup questionPutup1=blogService.getBloggerOfMonth(currentMonth);
 	    
 			System.out.println("employee id : "+questionPutup1.getEmployeeId());
-			PersonalDetails personalDetails1=personalDetailsService.getEmployeeById(questionPutup1.getEmployeeId());*/
-			/*if(personalDetails1!= null)
+			PersonalDetails personalDetails1=personalDetailsService.getEmployeeById(questionPutup1.getEmployeeId());*//*
+			*//*if(personalDetails1!= null)
 			{
 				model.addAttribute("bloggerOfMonth",personalDetails1);
-			}*/
+			}*//*
 			
-			/*blogger of Year*/
+			*//*blogger of Year*//*
 			System.out.println("Current Year is : " + now.get(Calendar.YEAR));
 			String currentYear=(now.get(Calendar.YEAR))+"";
 			System.out.println("calander has changed");
-			/*QuestionPutup questionPutup2=blogService.getBloggerOfYear(currentYear);
+			*//*QuestionPutup questionPutup2=blogService.getBloggerOfYear(currentYear);
 			PersonalDetails personalDetails2=personalDetailsService.getEmployeeById(questionPutup2.getEmployeeId());
 			if(personalDetails2!=null)
 			{
 				model.addAttribute("bloggerOfYear",personalDetails2);
-			}	*/
+			}	*//*
 			
-			/*blogger of week*/
+			*//*blogger of week*//*
 			now.setTime(new Date());
 			now.set(Calendar.DAY_OF_MONTH, now.get(Calendar.DAY_OF_MONTH)-6);
 			DateFormat dateFormat = new SimpleDateFormat("dd/M/yyyy");
@@ -84,7 +84,7 @@ public class BlogController {
 			
 			DateFormat dateFormat1 = new SimpleDateFormat("dd/M/yyyy");
 			Date date1 = new Date();
-			String currentDate=dateFormat1.format(date1);
+			String currentDate=dateFormat1.format(date1);*/
 			/*QuestionPutup questionPutup3=blogService.getBloggerOfWeek(fromDate,currentDate);
 			PersonalDetails personalDetails3=personalDetailsService.getEmployeeById(questionPutup3.getEmployeeId());
 			if(personalDetails3!=null)
@@ -93,12 +93,12 @@ public class BlogController {
 			}*/
 	    
 			return "blog";
-		}
+		/*}
 		catch(Exception ex)
 		{
 			System.out.println(ex.getMessage());
 			return "blog";
-		}
+		}*/
 					
 	}
 	

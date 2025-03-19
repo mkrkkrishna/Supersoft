@@ -1,13 +1,11 @@
 package com.soft.dao;
 
-/*
 import java.util.List;
 
 import com.soft.model.KeySkillDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface KeySkillDetailsDAO {
-	public void saveKeySkillDetails(KeySkillDetails keySkillDetails);
-	public void updateKeySkillDetails(KeySkillDetails keySkillDetails);
-	public List<KeySkillDetails> getKeySkillDetailsByEmailId(String employeeEmailId);
+@Repository
+public interface KeySkillDetailsDAO extends JpaRepository<KeySkillDetails,Integer> {
 }
-*/

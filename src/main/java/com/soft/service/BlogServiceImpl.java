@@ -2,7 +2,7 @@ package com.soft.service;
 
 /*
 import java.util.List;
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.soft.dao.BlogDAO;
 import com.soft.model.Comments;
@@ -16,94 +16,83 @@ public class BlogServiceImpl implements BlogService {
 	@Autowired
 	private BlogDAO blogDAO;
 	
-	@Transactional
+//	@Transactional
 	@Override
 	public void saveQuestion(QuestionPutup questionPutup) {
-		// TODO Auto-generated method stub
-		blogDAO.saveQuestion(questionPutup);
+		blogDAO.save(questionPutup);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public String searchQuestionViaQuestion(String aq) {
-		// TODO Auto-generated method stub
 		return blogDAO.searchQuestionViaQuestion(aq);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public List<QuestionPutup> listTitle() {
-		// TODO Auto-generated method stub
 		return blogDAO.listTitle();
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public QuestionPutup getQuestionById(Integer questionId) {
-		// TODO Auto-generated method stub
-		return blogDAO.getQuestionById(questionId);
+		return blogDAO.findById(questionId).orElse(new QuestionPutup());
 	}
 	
-	@Transactional
+//	@Transactional
 	@Override
 	public void saveComment(Comments comments)
 	{
-		blogDAO.saveComment(comments);
+		blogDAO.save(comments);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public List<Comments> listComment(Integer questionId) {
-		// TODO Auto-generated method stub
 		return blogDAO.listComment(questionId);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public void updateLikes(Integer questionId) {
-		// TODO Auto-generated method stub
 		blogDAO.updateLikes(questionId);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public void updateDislikes(Integer questionId) {
-		// TODO Auto-generated method stub
 		blogDAO.updateDislikes(questionId);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public List<QuestionPutup> getMyQuestionByEmployeeId(Integer employeeId) {
-		// TODO Auto-generated method stub
 		return blogDAO.getMyQuestionByEmployeeId(employeeId);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public Integer getIdByMailId(String emailId) {
-		// TODO Auto-generated method stub
 		return blogDAO.getIdByMailId(emailId);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public QuestionPutup getBloggerOfMonth(String recievedMonth) {
-		// TODO Auto-generated method stub
 		return blogDAO.getBloggerOfMonth(recievedMonth);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public QuestionPutup getBloggerOfYear(String recievedYear) {
-		// TODO Auto-generated method stub
 		return blogDAO.getBloggerOfYear(recievedYear);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public QuestionPutup getBloggerOfWeek(String fromDate, String currentDate) {
-		// TODO Auto-generated method stub
 		return blogDAO.getBloggerOfWeek(fromDate,currentDate);
 	}
-}*/
+}
+*/

@@ -1,7 +1,6 @@
 package com.soft.service;
 
-/*
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,10 +12,10 @@ public class WorkExperienceDetailsServiceImpl implements WorkExperienceDetailsSe
 	@Autowired
     private WorkExperienceDetailsDAO workExperienceDetailsDAO;
 	
-	@Transactional
+//	@Transactional
 	@Override
 	public void saveWorkExperienceDetails(WorkExperienceDetails workExperienceDetails)
 	{
-		workExperienceDetailsDAO.saveWorkExperienceDetails(workExperienceDetails);
+		workExperienceDetailsDAO.save(workExperienceDetails);
 	}
-}*/
+}

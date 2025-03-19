@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -569,7 +569,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				</div>
 				
 				<!-- contact us start -->
-					<%@ include file="/WEB-INF/pages/contactUs.jsp" %>
+
 				<!-- contact us end -->
 				<div class="col-sm-3">
                		<div id="googleMap" style="width:220px;height:220px;border:1px solid red;"></div>

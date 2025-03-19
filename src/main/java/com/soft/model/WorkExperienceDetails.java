@@ -1,18 +1,18 @@
 package com.soft.model;
 
 
-/*
+import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name="WORK_EXPERIENCE_DETAILS")
-@DynamicUpdate
-
 public class WorkExperienceDetails {
 	
 	@Id
 	@GeneratedValue
 	@Column(name="Serial_Id")
-	private Integer serialId=1;
+	private Integer serialId;
 
 	@Column(name = "Job_Title")
 	private String jobTitle;
@@ -28,8 +28,19 @@ public class WorkExperienceDetails {
 	
 	@Column(name = "Duration")
 	private String duration;
-	
-	
+
+
+	public WorkExperienceDetails() {
+	}
+
+	public WorkExperienceDetails(Integer serialId, String jobTitle, String companyName, String industryOfCompany, String functionalArea, String duration) {
+		this.serialId = serialId;
+		this.jobTitle = jobTitle;
+		this.companyName = companyName;
+		this.industryOfCompany = industryOfCompany;
+		this.functionalArea = functionalArea;
+		this.duration = duration;
+	}
 
 	public Integer getSerialId() {
 		return serialId;
@@ -78,4 +89,16 @@ public class WorkExperienceDetails {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-}*/
+
+	@Override
+	public String toString() {
+		return "WorkExperienceDetails{" +
+				"serialId=" + serialId +
+				", jobTitle='" + jobTitle + '\'' +
+				", companyName='" + companyName + '\'' +
+				", industryOfCompany='" + industryOfCompany + '\'' +
+				", functionalArea='" + functionalArea + '\'' +
+				", duration='" + duration + '\'' +
+				'}';
+	}
+}

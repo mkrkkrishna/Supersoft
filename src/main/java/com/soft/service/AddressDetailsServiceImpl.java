@@ -3,7 +3,7 @@ package com.soft.service;
 
 
 
-/*import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,11 +16,11 @@ public class AddressDetailsServiceImpl implements AddressDetailsService{
 	@Autowired
     private AddressDetailsDAO addressDetailsDAO;
 	
-	@Transactional
+//	@Transactional
 	@Override
 	public void saveAddressDetails(AddressDetails addressDetails)
 	{
-		addressDetailsDAO.saveAddressDetails(addressDetails);
+		addressDetailsDAO.save(addressDetails);
 	}
 	   
-}*/
+}

@@ -1,7 +1,9 @@
 package com.soft.controller;
 
 import com.soft.model.ContactUs;
+import com.soft.model.PersonalDetails;
 import com.soft.service.ContactUsService;
+import com.soft.service.PersonalDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,10 +29,12 @@ public class HelloController {
     private KeySkillDetailsService keySkillDetailsService;
     @Autowired
     private WorkExperienceDetailsService workExperienceDetailsService;
+    */
+    /*@Autowired
+    private ContactUsService contactUsService;
+
     @Autowired
     private PersonalDetailsService personalDetailsService;*/
-    /*@Autowired
-    private ContactUsService contactUsService;*/
 
     @GetMapping({"/","/index"})
     public String showHome()
@@ -42,7 +46,7 @@ public class HelloController {
     public String showListContactUs(ModelMap model)
     {
         //List<ContactUs> listContactUs=contactUsService.listContactUs();
-        //model.addAttribute("listContactUs",listContactUs);
+//        model.addAttribute("listContactUs",listContactUs);
         return "listContactUs";
     }
 
@@ -99,8 +103,8 @@ public class HelloController {
         return "ask";
     }
 
-    //@PostMapping(value="/saveEmployee")
-    /*public String toto(HttpServletRequest request,@RequestParam CommonsMultipartFile[] fileUpload)throws Exception {
+    /*@PostMapping(value="/saveEmployee")
+    public String saveEmployee(@RequestParam PersonalDetails personalDetails, @RequestParam Multipart CommonsMultipartFile[] fileUpload)throws Exception {
         try
         {
             PersonalDetails personalDetails=new PersonalDetails();
@@ -115,7 +119,7 @@ public class HelloController {
 
             personalDetails.setAuthority(request.getParameter("authority"));
             String a=request.getParameter("enabled");
-            personalDetails.setEnabled(a!=null);
+            //personalDetails.setEnabled(a!=null);
 
             if (fileUpload != null && fileUpload.length > 0)
             {
@@ -176,7 +180,7 @@ public class HelloController {
             System.out.println("experiense in month:"+request.getParameter("experience_in_months"));
             System.out.println("desired functional area:"+request.getParameter("desiredFunctionalArea"));
 
-            *//*for experience*//*
+            for experience
             System.out.println("experiense in year:"+request.getParameter("experience_in_years"));
             System.out.println("experiense in month:"+request.getParameter("experience_in_months"));
             System.out.println("salary in lakh:"+request.getParameter("salary_in_lakh"));
@@ -188,14 +192,14 @@ public class HelloController {
             System.out.println("start_month:"+request.getParameter("start_month"));
             System.out.println("start_year:"+request.getParameter("start_year"));
 
-            *//*for check present*//*
-            *//*show for clicked*//*
+            for check present
+            show for clicked
             System.out.println("is current"+request.getParameter("is_current"));
             if(request.getParameter("is_current").length()>1)
                 System.out.println(""+request.getParameter("end_month"));
             System.out.println(""+request.getParameter("end_year"));
 
-            *//*Education Details*//*
+            Education Details
             System.out.println(""+request.getParameter("education_level"));
             System.out.println(""+request.getParameter("education_specialization"));
             System.out.println(""+request.getParameter("institute_name"));

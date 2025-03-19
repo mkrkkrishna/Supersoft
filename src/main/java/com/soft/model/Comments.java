@@ -1,8 +1,11 @@
 package com.soft.model;
 
 
+import jakarta.persistence.*;
+import lombok.Data;
 
-/*@Entity
+@Data
+@Entity
 @Table(name="COMMENTS")
 public class Comments {
 
@@ -23,47 +26,65 @@ public class Comments {
 	@Column(name="COMMENT_DATE")
 	String commentDate;
 
-	public Integer getCommentId() {
-		return commentId;
-	}
+    public Comments() {
+    }
 
-	public void setCommentId(Integer commentId) {
-		this.commentId = commentId;
-	}
+    public Comments(Integer commentId, String commentContent, String employeeName, Integer questionId, String commentDate) {
+        this.commentId = commentId;
+        this.commentContent = commentContent;
+        this.employeeName = employeeName;
+        this.questionId = questionId;
+        this.commentDate = commentDate;
+    }
 
-	
+    public Integer getCommentId() {
+        return commentId;
+    }
 
-	public String getCommentContent() {
-		return commentContent;
-	}
+    public void setCommentId(Integer commentId) {
+        this.commentId = commentId;
+    }
 
-	public void setCommentContent(String commentContent) {
-		this.commentContent = commentContent;
-	}
+    public String getCommentContent() {
+        return commentContent;
+    }
 
-	public String getEmployeeName() {
-		return employeeName;
-	}
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
+    }
 
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
-	}
+    public String getEmployeeName() {
+        return employeeName;
+    }
 
-	public Integer getQuestionId() {
-		return questionId;
-	}
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
 
-	public void setQuestionId(Integer questionId) {
-		this.questionId = questionId;
-	}
+    public Integer getQuestionId() {
+        return questionId;
+    }
 
-	public String getCommentDate() {
-		return commentDate;
-	}
+    public void setQuestionId(Integer questionId) {
+        this.questionId = questionId;
+    }
 
-	public void setCommentDate(String commentDate) {
-		this.commentDate = commentDate;
-	}
-	
-	
-}*/
+    public String getCommentDate() {
+        return commentDate;
+    }
+
+    public void setCommentDate(String commentDate) {
+        this.commentDate = commentDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Comments{" +
+                "commentId=" + commentId +
+                ", commentContent='" + commentContent + '\'' +
+                ", employeeName='" + employeeName + '\'' +
+                ", questionId=" + questionId +
+                ", commentDate='" + commentDate + '\'' +
+                '}';
+    }
+}

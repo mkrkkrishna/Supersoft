@@ -3,8 +3,7 @@ package com.soft.service;
 
 
 
-/*
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,12 +15,10 @@ public class EducationDetailsServiceImpl implements EducationDetailsService{
 	@Autowired
     private EducationDetailsDAO educationDetailsDAO;
 	
-	@Transactional
+//	@Transactional
 	@Override
 	public void saveEducationDetails(EducationDetails educationDetails)
 	{
-		educationDetailsDAO.saveEducationDetails(educationDetails);
+		educationDetailsDAO.save(educationDetails);
 	}
-	
-	
-}*/
+}

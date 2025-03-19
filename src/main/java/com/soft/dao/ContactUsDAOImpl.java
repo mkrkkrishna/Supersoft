@@ -23,21 +23,19 @@ public class ContactUsDAOImpl implements ContactUsDAO{
 
 	@Override
 	public void saveContactUs(ContactUs contactUs) {
-		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(contactUs);
 	}
 
 	@Override
 	public List<ContactUs> listContactUs() {
-		// TODO Auto-generated method stub
 		Criteria crit = sessionFactory.getCurrentSession().createCriteria(ContactUs.class);	
 		return crit.list();
 	}
 	
 	@Override
 	public ContactUs getContactUsById(Integer contactId) {
-		// TODO Auto-generated method stub
 		return (ContactUs) sessionFactory.getCurrentSession().get(ContactUs.class,contactId);
 	}
 }
+
 */

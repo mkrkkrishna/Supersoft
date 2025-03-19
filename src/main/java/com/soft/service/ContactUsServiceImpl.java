@@ -3,8 +3,8 @@ package com.soft.service;
 import java.util.List;
 
 //import javax.transaction.Transactional;
-/*
 
+/*
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.soft.dao.ContactUsDAO;
@@ -15,25 +15,24 @@ public class ContactUsServiceImpl implements ContactUsService{
 	@Autowired
     private ContactUsDAO contactUsDAO;
 	
-	@Transactional
+	//@Transactional
 	@Override
 	public void saveContactUs(ContactUs contactUs)
 	{
-		contactUsDAO.saveContactUs(contactUs);
+		contactUsDAO.save(contactUs);
 	}
 
-	@Transactional
+	//@Transactional
 	@Override
 	public List<ContactUs> listContactUs() {
-		// TODO Auto-generated method stub
-		return contactUsDAO.listContactUs();
+		return contactUsDAO.findAll();
 	}
 
-	@Transactional
+	//@Transactional
 	@Override
 	public ContactUs getContactUsById(Integer contactId) {
-		// TODO Auto-generated method stub
-		return contactUsDAO.getContactUsById(contactId);
+		return contactUsDAO.findById(contactId).orElse(new ContactUs());
 	}
 }
 */
+

@@ -1,11 +1,12 @@
 package com.soft.service;
 
-/*
 import java.util.List;
 
 import com.soft.model.Comments;
 import com.soft.model.QuestionPutup;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface BlogService {
 	
 	public void saveQuestion(QuestionPutup questionPutup);
@@ -23,4 +24,3 @@ public interface BlogService {
 	public QuestionPutup getBloggerOfYear(String recievedYear);
 
 }
-*/
