@@ -1,21 +1,20 @@
 package com.soft.model;
 
 
+import jakarta.persistence.*;
+import lombok.Data;
 
-
-/*
+@Data
 @Entity
 @Table(name="ADDRESS_DETAILS")
-//@DynamicUpdate
-
 public class AddressDetails {
-	
-	@Id
-	@GeneratedValue
-	@Column(name="Serial_Id")
-	private Integer serialId=1;
-	
-	@Column(name="Address1")
+
+    @Id
+    @GeneratedValue
+    @Column(name="address_Id")
+    private Integer addressId;
+
+    @Column(name="Address1")
     private String address1;
 
     @Column(name="Address2")
@@ -32,63 +31,86 @@ public class AddressDetails {
     
     @Column(name="Country")
     private String country="INDIA";
-    
-    
 
-	public Integer getSerialId() {
-		return serialId;
-	}
+    public AddressDetails() {
+    }
 
-	public void setSerialId(Integer serialId) {
-		this.serialId = serialId;
-	}
+    public AddressDetails(Integer addressId, String address1, String address2, String city, String pincode, String state, String country) {
+        this.addressId = addressId;
+        this.address1 = address1;
+        this.address2 = address2;
+        this.city = city;
+        this.pincode = pincode;
+        this.state = state;
+        this.country = country;
+    }
 
-	public String getAddress1() {
-		return address1;
-	}
+    public Integer getAddressId() {
+        return addressId;
+    }
 
-	public void setAddress1(String address1) {
-		this.address1 = address1;
-	}
+    public void setAddressId(Integer addressId) {
+        this.addressId = addressId;
+    }
 
-	public String getAddress2() {
-		return address2;
-	}
+    public String getAddress1() {
+        return address1;
+    }
 
-	public void setAddress2(String address2) {
-		this.address2 = address2;
-	}
+    public void setAddress1(String address1) {
+        this.address1 = address1;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getAddress2() {
+        return address2;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
 
-	public String getPincode() {
-		return pincode;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setPincode(String pincode) {
-		this.pincode = pincode;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public String getPincode() {
+        return pincode;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
 
-	public String getCountry() {
-		return country;
-	}
+    public String getState() {
+        return state;
+    }
 
-	public void setCountry(String country) {
-		this.country = country;
-	}
-    
-}*/
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "AddressDetails{" +
+                "addressId=" + addressId +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
+                ", pincode='" + pincode + '\'' +
+                ", state='" + state + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
+}

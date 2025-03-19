@@ -3,31 +3,40 @@ package com.soft.model;
 
 
 
-/*
 public class Tag {
 
 	public int id;
 	public String tagName;
 
-	public int getId() {
-		return id;
-	}
+    public Tag() {
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Tag(int id, String tagName) {
+        this.id = id;
+        this.tagName = tagName;
+    }
 
-	public String getTagName() {
-		return tagName;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setTagName(String tagName) {
-		this.tagName = tagName;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public Tag(int id, String tagName) {
-		this.id = id;
-		this.tagName = tagName;
-	}
+    public String getTagName() {
+        return tagName;
+    }
 
-}*/
+    public void setTagName(String tagName) {
+        this.tagName = tagName;
+    }
+
+    @Override
+    public String toString() {
+        return "Tag{" +
+                "id=" + id +
+                ", tagName='" + tagName + '\'' +
+                '}';
+    }
+}

@@ -1,18 +1,17 @@
 package com.soft.model;
 
-//import org.hibernate.annotations.DynamicUpdate;
+import jakarta.persistence.*;
+import lombok.Data;
 
-/*
+@Data
 @Entity
 @Table(name="EDUCATIONAL_DETAILS")
-@DynamicUpdate
-
 public class EducationDetails {
 	
 	@Id
 	@GeneratedValue
 	@Column(name="Serial_Id")
-	private Integer serialId=1;
+	private Integer serialId;
 	
 	@Column(name="Qualification_Level")
     private String qualificationLevel;
@@ -28,8 +27,18 @@ public class EducationDetails {
 	
 	@Column(name="Course_Type")
     private String courseType;
-	
-	
+
+	public EducationDetails() {
+	}
+
+	public EducationDetails(Integer serialId, String qualificationLevel, String educationSpecialization, String institute_Name, String yearOfPassout, String courseType) {
+		this.serialId = serialId;
+		this.qualificationLevel = qualificationLevel;
+		this.educationSpecialization = educationSpecialization;
+		this.institute_Name = institute_Name;
+		this.yearOfPassout = yearOfPassout;
+		this.courseType = courseType;
+	}
 
 	public Integer getSerialId() {
 		return serialId;
@@ -78,4 +87,16 @@ public class EducationDetails {
 	public void setCourseType(String courseType) {
 		this.courseType = courseType;
 	}
-}*/
+
+	@Override
+	public String toString() {
+		return "EducationDetails{" +
+				"serialId=" + serialId +
+				", qualificationLevel='" + qualificationLevel + '\'' +
+				", educationSpecialization='" + educationSpecialization + '\'' +
+				", institute_Name='" + institute_Name + '\'' +
+				", yearOfPassout='" + yearOfPassout + '\'' +
+				", courseType='" + courseType + '\'' +
+				'}';
+	}
+}

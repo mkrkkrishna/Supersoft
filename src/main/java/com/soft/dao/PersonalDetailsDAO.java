@@ -1,14 +1,9 @@
 package com.soft.dao;
 
-/*
 import com.soft.model.PersonalDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PersonalDetailsDAO {
-	public void savePersonalDetails(PersonalDetails personalDetails);
-	public PersonalDetails getPersonalDetailsByMailId(String mailId);
-	public PersonalDetails getEmployeeById(Integer employeeId);
-	public void updatePersonalDetails(PersonalDetails personalDetails);
-	
-	
+@Repository
+public interface PersonalDetailsDAO extends JpaRepository<PersonalDetails,Integer> {
 }
-*/

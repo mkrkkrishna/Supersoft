@@ -1,9 +1,9 @@
 package com.soft.service;
 
-/*
 import java.util.List;
 
-import javax.transaction.Transactional;
+//import javax.transaction.Transactional;
+/*
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,25 +15,16 @@ public class KeySkillDetailsServiceImpl implements KeySkillDetailsService{
 	@Autowired
     private KeySkillDetailsDAO keySkillDetailsDAO;
 	
-	@Transactional
+//	@Transactional
 	@Override
-	public void saveKeySkillDetails(KeySkillDetails keySkillDetails)
-	{
-		keySkillDetailsDAO.saveKeySkillDetails(keySkillDetails);
-	}
-	
-	@Transactional
-	@Override
-	public void updateKeySkillDetails(KeySkillDetails keySkillDetails)
-	{
-		keySkillDetailsDAO.updateKeySkillDetails(keySkillDetails);
+	public void saveOrUpdateKeySkillDetails(KeySkillDetails keySkillDetails) {
+		keySkillDetailsDAO.save(keySkillDetails);
 	}
 
-	@Transactional
+//	@Transactional
 	@Override
 	public List<KeySkillDetails> getKeySkillsDetailsByEmailId(String employeeEmailId) {
-		// TODO Auto-generated method stub
-		return keySkillDetailsDAO.getKeySkillDetailsByEmailId(employeeEmailId);
+		return keySkillDetailsDAO.findByEmployeeEmailId(employeeEmailId);
 	}
 }
 */

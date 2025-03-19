@@ -1,15 +1,11 @@
 package com.soft.dao;
 
-import java.util.List;
-
 import com.soft.model.ContactUs;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
+public interface ContactUsDAO// extends JpaRepository<ContactUs,Inter>
+{
 
-
-
-public interface ContactUsDAO {
-	public void saveContactUs(ContactUs contactUs);
-	public List<ContactUs> listContactUs();
-	public ContactUs getContactUsById(Integer contactId);
-		
 }
