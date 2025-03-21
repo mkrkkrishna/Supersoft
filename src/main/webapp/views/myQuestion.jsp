@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -262,10 +262,10 @@ i {
             }
             var element = document.getElementById(positionId);
 
-            var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal"> « Prev </span> | ';
+            var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal"> ï¿½ Prev </span> | ';
             for (var page = 1; page <= this.pages; page++)
                 pagerHtml += '<span id="pg' + page + '" class="pg-normal" onclick="' + pagerName + '.showPage(' + page + ');">' + page + '</span> | ';
-            pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal"> Next »</span>';
+            pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal"> Next ï¿½</span>';
 
             element.innerHTML = pagerHtml;
         }
@@ -582,7 +582,7 @@ showNextItems();
 				</div>
 				
 				<!-- contact us start -->
-					<%@ include file="/WEB-INF/pages/contactUs.jsp" %>
+
 				<!-- contact us end -->
 				<script>
 function initialize() {

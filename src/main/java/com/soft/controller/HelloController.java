@@ -2,14 +2,16 @@ package com.soft.controller;
 
 import com.soft.model.ContactUs;
 import com.soft.model.PersonalDetails;
-import com.soft.service.ContactUsService;
-import com.soft.service.PersonalDetailsService;
+import com.soft.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -21,40 +23,23 @@ public class HelloController {
     private String user="www.ghochu.prasad@gmail.com";
     private String pass="rohitkumarmishra";*/
 
-    /*@Autowired
-    private AddressDetailsService addressDetailsService;
+    @Autowired
+    private AddressDetailsService addressDetailService;
     @Autowired
     private EducationDetailsService educationDetailsService;
     @Autowired
     private KeySkillDetailsService keySkillDetailsService;
     @Autowired
     private WorkExperienceDetailsService workExperienceDetailsService;
-    */
-    /*@Autowired
-    private ContactUsService contactUsService;
-
     @Autowired
-    private PersonalDetailsService personalDetailsService;*/
+    private ContactUsService contactUsService;
+    @Autowired
+    private PersonalDetailsService personalDetailsService;
 
     @GetMapping({"/","/index"})
     public String showHome()
     {
         return "index";
-    }
-
-    @GetMapping("/listContactUs")
-    public String showListContactUs(ModelMap model)
-    {
-        //List<ContactUs> listContactUs=contactUsService.listContactUs();
-//        model.addAttribute("listContactUs",listContactUs);
-        return "listContactUs";
-    }
-
-    @GetMapping("contactUsDetails/{contactId}")
-    public String showContactUsDetails(ModelMap model,@PathVariable("contactId") Integer contactId)
-    {
-//        model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
-        return "showContactUsDetails";
     }
 
     //@PostMapping(value="/reply")
@@ -262,15 +247,31 @@ public class HelloController {
     }*/
 
 
-    //@PostMapping(value="/contactUs")
-    /*public String contactUs(HttpServletRequest request)
+
+    @GetMapping("/listContactUs")
+    public String showListContactUs(ModelMap model)
     {
+        List<ContactUs> listContactUs=contactUsService.listContactUs();
+        model.addAttribute("listContactUs",listContactUs);
+        return "listContactUs";
+    }
+
+    @GetMapping("contactUsDetails/{contactId}")
+    public String showContactUsDetails(ModelMap model,@PathVariable("contactId") Integer contactId)
+    {
+        model.addAttribute("contactUsInformation",contactUsService.getContactUsById(contactId));
+        return "showContactUsDetails";
+    }
+
+    @PostMapping(value="/contactUs")
+    //public String contactUs(HttpServletRequest request)
+    public String contactUs(){
         try
         {
-            System.out.println(request.getParameter("contactName"));
+            /*System.out.println(request.getParameter("contactName"));
             System.out.println(request.getParameter("contactEmail"));
             System.out.println(request.getParameter("contactNumber"));
-            System.out.println(request.getParameter("contactText"));
+            System.out.println(request.getParameter("contactText"));*/
 
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             Date date = new Date();
@@ -278,11 +279,11 @@ public class HelloController {
             System.out.println(currentDate);
 
             ContactUs contactUs=new ContactUs();
-            contactUs.setContactName(request.getParameter("contactName"));
+            /*contactUs.setContactName(request.getParameter("contactName"));
             contactUs.setContactEmail(request.getParameter("contactEmail"));
             contactUs.setContectNumber(request.getParameter("contactNumber"));
             contactUs.setContactText(request.getParameter("contactText"));
-            contactUs.setContactDate(currentDate);
+            contactUs.setContactDate(currentDate);*/
             contactUsService.saveContactUs(contactUs);
 
         }
@@ -291,8 +292,5 @@ public class HelloController {
             System.out.println("in catch "+ex.getStackTrace());
         }
         return "index";
-    }*/
-
-
-
+    }
 }
