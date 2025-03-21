@@ -1,0 +1,76 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	
+}
+.mycontainer{
+	width:100%;
+	min-width:200px;
+	
+}
+.mrg{
+	margin-top:10px;
+}
+.bmrg{
+	margin-top:10px;
+	margin-left:10px;
+}
+.mcol{
+	 float:center;
+}
+.mcol>li{
+	<!--border-right:1px solid #d1d1d1;-->
+	list-type:none;
+}
+.mcol>li>a{
+	color:white;
+}
+.mcol>li>a:hover{
+	color:black;
+	font-weight:bold;
+}
+.mymenu{
+	background-color:#337ab7;
+	margin-top:5px;
+}
+.mymenu>ul>li{
+	list-style-type:none;
+	float:left;
+	padding:0px;
+	border-right:1px solid #d1d1d1;
+}
+.mymenu>ul>li>a{
+	padding:5px;
+	display:block;
+	text-decoration:none;
+	color:#fff;
+}
+.mymenu>ul>li:hover a{
+	background-color:black;
+	font-weight:bold;
+}
+.smnu{
+	border:1px solid #d1d1d1;
+	border-radius:5px;
+}
+.smnu>li{
+	border-bottom:1px solid #d1d1d1;
+}
+.pdd{
+	padding:0px;
+}
+.hed{
+	background-color:#d1d1d1;
+	display:block;
+	text-align:center;
+}
+.ftmnu>div>ul>li{
+	list-style-type:none;
+}
+.ftmnu>div>ul>li>a{
+	text-decoration:none;
+	color:#fff;
+}
+.rbo{
+	border-right:1px solid #d1d1d1;
+}
