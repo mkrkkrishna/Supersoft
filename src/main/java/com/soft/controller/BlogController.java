@@ -20,62 +20,58 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import com.soft.model.*;
 
-//import com.soft.service.BlogService;
-//import com.soft.service.KeySkillDetailsService;
-//import com.soft.service.PersonalDetailsService;
+import com.soft.service.BlogService;
+import com.soft.service.KeySkillDetailsService;
+import com.soft.service.PersonalDetailsService;
 
 
 @Controller
 @RequestMapping("/blog")
 public class BlogController {
 
-	/*@Autowired
+	@Autowired
 	private BlogService blogService;
 	
 	@Autowired
 	private PersonalDetailsService personalDetailsService;
 	
 	@Autowired
-	private KeySkillDetailsService keySkillDetailsService;*/
-	
-	
-	
-	
+	private KeySkillDetailsService keySkillDetailsService;
+
 	@GetMapping("/blogPage")
-	public String showBlog(ModelMap model)
-	{
-		/*try
+	public String showBlog(ModelMap model) {
+		try
 		{
-			*//*List<QuestionPutup> listQuestionPutup=blogService.listTitle();
-			model.addAttribute("listQuestion",listQuestionPutup);*//*
+			List<QuestionPutup> listQuestionPutup=blogService.listTitle();
+			model.addAttribute("listQuestion",listQuestionPutup);
 		
 			Calendar now = Calendar.getInstance();
 			
-			*//*blogger of month*//*
-			*//*String currentMonth=(now.get(Calendar.MONTH) + 1)+"";
+			//blogger of month
+			/*String currentMonth=(now.get(Calendar.MONTH) + 1)+"";
 			System.out.println("current month is string :"+currentMonth);
 			QuestionPutup questionPutup1=blogService.getBloggerOfMonth(currentMonth);
 	    
 			System.out.println("employee id : "+questionPutup1.getEmployeeId());
-			PersonalDetails personalDetails1=personalDetailsService.getEmployeeById(questionPutup1.getEmployeeId());*//*
-			*//*if(personalDetails1!= null)
+			PersonalDetails personalDetails1=personalDetailsService.getEmployeeById(questionPutup1.getEmployeeId());
+			if(personalDetails1!= null)
 			{
 				model.addAttribute("bloggerOfMonth",personalDetails1);
-			}*//*
+			}*/
 			
-			*//*blogger of Year*//*
-			System.out.println("Current Year is : " + now.get(Calendar.YEAR));
+			//blogger of Year
+			/*System.out.println("Current Year is : " + now.get(Calendar.YEAR));
 			String currentYear=(now.get(Calendar.YEAR))+"";
 			System.out.println("calander has changed");
-			*//*QuestionPutup questionPutup2=blogService.getBloggerOfYear(currentYear);
+			QuestionPutup questionPutup2=blogService.getBloggerOfYear(currentYear);
 			PersonalDetails personalDetails2=personalDetailsService.getEmployeeById(questionPutup2.getEmployeeId());
 			if(personalDetails2!=null)
 			{
 				model.addAttribute("bloggerOfYear",personalDetails2);
-			}	*//*
+			}	*/
 			
-			*//*blogger of week*//*
-			now.setTime(new Date());
+			//blogger of week
+			/*now.setTime(new Date());
 			now.set(Calendar.DAY_OF_MONTH, now.get(Calendar.DAY_OF_MONTH)-6);
 			DateFormat dateFormat = new SimpleDateFormat("dd/M/yyyy");
 			Date date = now.getTime();
@@ -84,8 +80,8 @@ public class BlogController {
 			
 			DateFormat dateFormat1 = new SimpleDateFormat("dd/M/yyyy");
 			Date date1 = new Date();
-			String currentDate=dateFormat1.format(date1);*/
-			/*QuestionPutup questionPutup3=blogService.getBloggerOfWeek(fromDate,currentDate);
+			String currentDate=dateFormat1.format(date1);
+			QuestionPutup questionPutup3=blogService.getBloggerOfWeek(fromDate,currentDate);
 			PersonalDetails personalDetails3=personalDetailsService.getEmployeeById(questionPutup3.getEmployeeId());
 			if(personalDetails3!=null)
 			{
@@ -93,13 +89,11 @@ public class BlogController {
 			}*/
 	    
 			return "blog";
-		/*}
-		catch(Exception ex)
-		{
+		}
+		catch(Exception ex) {
 			System.out.println(ex.getMessage());
 			return "blog";
-		}*/
-					
+		}
 	}
 	
 	
@@ -442,59 +436,58 @@ public class BlogController {
 	
 	
 	
-	/*@GetMapping(value="/myQuestion")
+	@GetMapping(value="/myQuestion")
     public String showMyQuestion(ModelMap model,Principal principal)
     {
 		System.out.println("in my question");
-		String emailId=principal.getName();
+		/*String emailId=principal.getName();
 		System.out.println("email ID using principal : "+emailId);
 		Integer employeeId=blogService.getIdByMailId(emailId);
 		
 		List<QuestionPutup> listMyQuestionPutup=blogService.getMyQuestionByEmployeeId(employeeId);
-		model.addAttribute("listMyQuestion",listMyQuestionPutup);
+		model.addAttribute("listMyQuestion",listMyQuestionPutup);*/
 		return "myQuestion";
-    }*/
+    }
 	
 	
-	/*@GetMapping("/myProfile")
+	@GetMapping("/myProfile")
     public String showMyProfile(ModelMap model,Principal principal)
     {
 		
-		String mailId=principal.getName();
+		/*String mailId=principal.getName();
 		System.err.println("recieved mail id from principal in my profile : "+mailId);
 		System.out.println("Personal Details DATAAAAAAAAAAAAAAAA");
 		PersonalDetails personalDetails=personalDetailsService.getPersonalDetailsByMailId(mailId);
-		model.addAttribute("personalDetails",personalDetails);
+		model.addAttribute("personalDetails",personalDetails);*/
 		
 		
-		System.out.println("Address Details DATAAAAAAAAAAAAAAAA");
+		/*System.out.println("Address Details DATAAAAAAAAAAAAAAAA");
 		AddressDetails addressDetails=personalDetails.getAddressDetails();
-		model.addAttribute("addressDetails",addressDetails);
+		model.addAttribute("addressDetails",addressDetails);*/
 		
 		
-		System.out.println("WorkExperience Details DATAAAAAAAAAAAAAAAA");
+		/*System.out.println("WorkExperience Details DATAAAAAAAAAAAAAAAA");
 		WorkExperienceDetails workExperienceDetails=personalDetails.getWorkExperienceDetails();
-		model.addAttribute("workExperienceDetails",workExperienceDetails);
+		model.addAttribute("workExperienceDetails",workExperienceDetails);*/
 		
-		System.out.println("Education Details DATAAAAAAAAAAAAAAAA");
+		/*System.out.println("Education Details DATAAAAAAAAAAAAAAAA");
 		EducationDetails educationDetails=personalDetails.getEducationDetails();
-		model.addAttribute("educationDetails",educationDetails);
+		model.addAttribute("educationDetails",educationDetails);*/
 		
 		
 		
-		System.out.println("Key Skills Details DATAAAAAAAAAAAAAAAA");
+		/*System.out.println("Key Skills Details DATAAAAAAAAAAAAAAAA");
 		String employeeEmailId=personalDetails.getEmailId();
 		
-		List<KeySkillDetails> keySkillDetailsList=keySkillDetailsService.getKeySkillsDetailsByEmailId(employeeEmailId);
-		 
-		*//*KeySkillDetails keySkillDetails=keySkillDetailsList.get(0);
+		List<KeySkillDetails> keySkillDetailsList=keySkillDetailsService.getKeySkillsDetailsByEmailId(employeeEmailId);*/
+
+		/*KeySkillDetails keySkillDetails=keySkillDetailsList.get(0);
 		System.out.println("new key skill are comming from database according to Email ID");
 		System.out.println(keySkillDetails.getKeySkill());
 		System.out.println(keySkillDetails.getSkillYear());
-		System.out.println(keySkillDetails.getEmployeeEmailId());*//*
-		
-		model.addAttribute("keySkillDetailsList",keySkillDetailsList);
-		
+		System.out.println(keySkillDetails.getEmployeeEmailId());
+
+		model.addAttribute("keySkillDetailsList",keySkillDetailsList);*/
 		return "myProfilePage";
-    }*/
+    }
 }

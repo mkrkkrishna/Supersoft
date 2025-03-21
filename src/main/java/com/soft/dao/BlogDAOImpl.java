@@ -1,9 +1,8 @@
 package com.soft.dao;
 
+
+
 /*import java.util.List;
-
-
-
 import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
 import org.hibernate.SessionFactory;
@@ -30,13 +29,11 @@ public class BlogDAOImpl implements BlogDAO {
 	
 	@Override
 	public void saveQuestion(QuestionPutup questionPutup) {
-		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().merge(questionPutup);
 	}
 
 	@Override
 	public String searchQuestionViaQuestion(String aq) {
-		// TODO Auto-generated method stub
 		try{
 			Criteria criteria = sessionFactory.getCurrentSession().createCriteria(QuestionPutup.class);
 			criteria.add(Restrictions.eq("title", aq));
@@ -54,9 +51,7 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<QuestionPutup> listTitle() {
-		// TODO Auto-generated method stub
-		
-		Criteria crit = sessionFactory.getCurrentSession().createCriteria(QuestionPutup.class);	
+		Criteria crit = sessionFactory.getCurrentSession().createCriteria(QuestionPutup.class);
 		crit.addOrder(Order.desc("title"));
 		*//*Projection p1=Projections.projectionList();
 		((ProjectionList) p1).add(Projections.property("title"));
@@ -66,14 +61,11 @@ public class BlogDAOImpl implements BlogDAO {
 
 	@Override
 	public QuestionPutup getQuestionById(Integer questionId) {
-		// TODO Auto-generated method stub
 		return (QuestionPutup) sessionFactory.getCurrentSession().get(QuestionPutup.class,questionId);
 	}
 
 	@Override
 	public void saveComment(Comments comments) {
-		// TODO Auto-generated method stub
-		
 		sessionFactory.getCurrentSession().save(comments);
 		
 	}
@@ -81,7 +73,6 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Comments> listComment(Integer questionId) {
-		// TODO Auto-generated method stub
 		try{
 			Criteria crit = sessionFactory.getCurrentSession().createCriteria(Comments.class);	
 			crit.add(Restrictions.eq("questionId",questionId));
@@ -113,7 +104,6 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<QuestionPutup> getMyQuestionByEmployeeId(Integer employeeId) {
-		// TODO Auto-generated method stub
 		try{
 			Criteria crit = sessionFactory.getCurrentSession().createCriteria(QuestionPutup.class);	
 			crit.add(Restrictions.eq("employeeId",employeeId));
@@ -128,7 +118,6 @@ public class BlogDAOImpl implements BlogDAO {
 
 	@Override
 	public Integer getIdByMailId(String emailId) {
-		// TODO Auto-generated method stub
 		try{
 			Criteria criteria = sessionFactory.getCurrentSession().createCriteria(PersonalDetails.class);
 			criteria.add(Restrictions.eq("emailId", emailId));
@@ -145,7 +134,6 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public QuestionPutup getBloggerOfWeek(String fromDate, String currentDate) {
-		// TODO Auto-generated method stub
 		try{
 			System.out.println("bloggger week1");
 			
@@ -170,7 +158,6 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public QuestionPutup getBloggerOfMonth(String recievedMonth) {
-		// TODO Auto-generated method stub
 		try{
 			System.out.println("bloggger month1");
 			
@@ -194,7 +181,6 @@ public class BlogDAOImpl implements BlogDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public QuestionPutup getBloggerOfYear(String recievedYear) {
-		// TODO Auto-generated method stub
 		try{
 			SQLQuery query =sessionFactory.getCurrentSession().createSQLQuery("select * FROM QUESTION_PUTUP WHERE Date_of_question_putup LIKE '%"+recievedYear+"' and Likes=(select max(Likes) from QUESTION_PUTUP)");
 			query.addEntity(QuestionPutup.class);
@@ -208,7 +194,4 @@ public class BlogDAOImpl implements BlogDAO {
 			return new QuestionPutup();
 		}
 	}
-
-	
-
 }*/

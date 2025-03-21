@@ -16,13 +16,11 @@ public class KeySkillDetailsDAOImpl implements KeySkillDetailsDAO {
 
 	@Override
 	public void saveKeySkillDetails(KeySkillDetails keySkillDetails) {
-		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(keySkillDetails);
 	}
 	
 	@Override
 	public void updateKeySkillDetails(KeySkillDetails keySkillDetails) {
-		// TODO Auto-generated method stub
 		//code in java file
 		sessionFactory.getCurrentSession().update(keySkillDetails);
 	}
@@ -30,7 +28,6 @@ public class KeySkillDetailsDAOImpl implements KeySkillDetailsDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<KeySkillDetails> getKeySkillDetailsByEmailId(String employeeEmailId) {
-		// TODO Auto-generated method stub
 		try{
 			Criteria crit = sessionFactory.getCurrentSession().createCriteria(KeySkillDetails.class);	
 			crit.add(Restrictions.eq("employeeEmailId",employeeEmailId));
@@ -42,6 +39,4 @@ public class KeySkillDetailsDAOImpl implements KeySkillDetailsDAO {
 			return null;
 		}
 	}
-
-	
 }*/

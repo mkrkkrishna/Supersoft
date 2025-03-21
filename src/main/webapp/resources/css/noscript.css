@@ -1,0 +1,10 @@
+.ei-slider{
+	height: 100px;
+}
+.ei-slider-thumbs{
+	display: none;
+	list-style:none;
+}
+.ei-slider-large li{
+	position: relative;
+}

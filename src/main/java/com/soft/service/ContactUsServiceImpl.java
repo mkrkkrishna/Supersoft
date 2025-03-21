@@ -4,12 +4,13 @@ import java.util.List;
 
 //import javax.transaction.Transactional;
 
-/*
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.soft.dao.ContactUsDAO;
 import com.soft.model.ContactUs;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ContactUsServiceImpl implements ContactUsService{
 	
 	@Autowired
@@ -34,5 +35,4 @@ public class ContactUsServiceImpl implements ContactUsService{
 		return contactUsDAO.findById(contactId).orElse(new ContactUs());
 	}
 }
-*/
 
